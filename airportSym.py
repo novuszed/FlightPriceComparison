@@ -9,7 +9,7 @@ import csv
 from string import ascii_lowercase
 from airPort import airPort
 
-
+#write data to csv given airport list
 def writeToCsv(airPortList):
     print("-----------Writing to CSV--------------")
     with open('airportcodes.csv', 'w', newline='') as csvfile:
@@ -19,6 +19,7 @@ def writeToCsv(airPortList):
             cityName = u''.join(port.getCity()).encode('utf-8').strip()
             countryName=u''.join(port.getCountry()).encode('utf-8').strip()
             airCodeWriter.writerow([cityName,countryName, port.getIATA(), port.getICAO(), port.getFAA()])
+#parses the link to find all the air port codes and city names and countries
 def htmlParser():
     allAirPorts = list()
     for c in ascii_lowercase:

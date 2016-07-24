@@ -1,4 +1,6 @@
 __author__ = 'zihaozhu'
+
+#simple airport class to store and fetch data 
 class airPort:
     city = ""
     country =""
