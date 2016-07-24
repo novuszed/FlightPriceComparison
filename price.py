@@ -132,6 +132,15 @@ def getCheapest(data):
     sorted_data= sorted(data.items(), key=operator.itemgetter(1)[0])
     return sorted_data
 
+def userPrompt():
+    startDate = input("Please enter starting date in format YYYY-MM-DD")
+    endDate = input("Please enter ending date in format YYYY-MM-DD")
+    departure = input("Input 3 letter IATA codes for the airport. Refer to the CSV for information")
+    arrival = input("Input 3 letter IATA codes for the airport. Refer to the CSV for info")
+    getLowestPrice(departure,arrival,list([startDate,endDate]),endDate-startDate)
+    
+
+
 #readCSV()
 #print(IATAList)
 #airCodesubset2(IATAList,list(),2,0)
